@@ -6,9 +6,23 @@ python app.py
 ```
 #### Ejecución de Angular
 ```
-python app.py
+ng serve --o
 ```
 #### Ejecución de DockerCompose
 ```
-python app.py
+docker-compose up
 ```
+### Uso de la Aplicación
+#### Servicio para codificar con RSA
+http://127.0.0.1:5000/CIRSA, Envía al backend un archivo txt desde el angular que se le pide anteriormente al usuario lo codifica con el algoritmo RSA y retorna un archivo txt que se descarga automáticamente.
+#### Servicio para decodificar con RSA
+http://127.0.0.1:5000/CIRSA, Envía al backend un archivo txt codificado por el algoritmo RSA desde el angular que se le pide al usuario subirlo lo decodifica con el algoritmo de decodificado de RSA y retorna un archivo txt que se descarga automáticamente.
+#### Servicio para codificar con AES
+http://127.0.0.1:5000/CIRSA, Envía al backend un archivo txt desde el angular que se le pide anteriormente al usuario lo codifica con el algoritmo AES y retorna un archivo txt que se descarga automáticamente.
+#### Servicio para decodificar con AES
+http://127.0.0.1:5000/CIRSA, Envía al backend un archivo txt codificado por el algoritmo AES desde el angular que se le pide al usuario subirlo lo decodifica con el algoritmo de decodificado de AES y retorna un archivo txt que se descarga automáticamente.
+#### Componentes Principales
+* Flask
+* Angular
+* PyCuda
+* Docker
