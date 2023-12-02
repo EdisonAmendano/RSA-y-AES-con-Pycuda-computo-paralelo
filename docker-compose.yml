@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   encriptacion-api:
-    image: back
+    image: edison323/back:v1
     ports:
       - "5000:5000"
     environment:
@@ -15,7 +15,7 @@ services:
             capabilities: [gpu]
 
   encriptacion-web:
-    image: front
+    image: edison323/front:v1
     ports:
       - "80:80"
     depends_on:
