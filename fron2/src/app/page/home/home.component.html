@@ -1,0 +1,30 @@
+<div class="formulario-futurista">
+    <div class="subir-archivo">
+        <div class="input-file-container">
+            <input type="file" id="my-file" class="input-file" (change)="seleccionarArchivo($event)">
+            <label tabindex="0" for="my-file" class="input-file-trigger">Seleccionar archivo</label>
+        </div>
+        <p *ngIf="archivoSeleccionado">{{ archivoSeleccionado.name }}</p>
+    </div>    
+
+    <div class="acciones">
+        <div class="columna codificar">
+            <h3>Codificar</h3>
+            <button (click)="CodificarRSA()">Codificar RSA</button>
+            <button (click)="CodificarAES()">Codificar AES</button>
+        </div>
+        <div class="columna decodificar">
+            <h3>Decodificar</h3>
+            <button (click)="DecodificarRSA()">Decodificar RSA</button>
+            <button (click)="DecodificarAES()">Decodificar AES</button>
+        </div>
+    </div>
+
+    <!-- Barra de carga/spinner al final del formulario -->
+    <div class="spinner-container" *ngIf="cargando">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+
+
